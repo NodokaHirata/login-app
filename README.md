@@ -1,8 +1,35 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Project Overview
+This project includes a login and user management system using Next.js, Tailwind CSS for styling, and API routes for handling authentication and user data.
+
+Features
+Login Page: Users can log in with a username and password.
+User Page: Displays basic user information after logging in.
+Account Creation: Allows users to create an account with an email, username, and password.
+
+Please use "username" as Username and "password" as Password to login.
+
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and navigate to the project directory:
+
+```bash
+git clone <your-repo-url>
+cd <your-repo-directory>
+```
+
+Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+ Run the development server:
 
 ```bash
 npm run dev
@@ -15,6 +42,16 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+To run the tests, use the following command:
+
+```bash
+npm test
+# or
+yarn test
+# or
+pnpm test
+```
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
