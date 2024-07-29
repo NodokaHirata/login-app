@@ -8,15 +8,15 @@ const MockLayout = ({ children }: { children: React.ReactNode }) => {
       </RootLayout>
     );
   };
-  
-  test('renders header, main and footer', () => {
-    const { getByText } = render(
-      <MockLayout>
-        <div>Test Content</div>
-      </MockLayout>
-    );
-  
-    expect(getByText('Header Component')).toBeInTheDocument();
-    expect(getByText('Test Content')).toBeInTheDocument();
-    expect(getByText('Footer Component')).toBeInTheDocument();
-  });
+
+test('renders header, main and footer', () => {
+  const { getByText } = render(
+    <MockLayout>
+      <div>Test Content</div>
+    </MockLayout>
+  );
+
+  expect(getByText('My App')).toBeInTheDocument();
+  expect(getByText('Test Content')).toBeInTheDocument();
+  expect(getByText('All rights reserved.')).toBeInTheDocument();
+});

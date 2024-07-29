@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import LoginPage from '../app/login/page';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
-// Mock the next/router module
-jest.mock('next/router', () => ({
+// Mock the next/navigation module
+jest.mock('next/navigation', () => ({
   useRouter: jest.fn(),
 }));
 
@@ -16,8 +16,8 @@ describe('LoginPage', () => {
     }));
 
     render(<LoginPage />);
-    expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('Password')).toBeInTheDocument();
+    expect(screen.getByLabelText('Username')).toBeInTheDocument();
+    expect(screen.getByLabelText('Password')).toBeInTheDocument();
   });
 
   it('shows validation messages', () => {
