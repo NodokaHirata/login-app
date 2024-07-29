@@ -2,7 +2,8 @@
 
 This project includes a login and user management system using Next.js, Tailwind CSS for styling, and API routes for handling authentication and user data.
 
-Features
+## Features
+
 Login Page: Users can log in with a username and password.
 User Page: Displays basic user information after logging in.
 Account Creation: Allows users to create an account with an email, username, and password.
