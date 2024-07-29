@@ -5,11 +5,13 @@ import Footer from './components/layouts/footer/Footer';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+    <html lang="en">
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
   );
 };
 

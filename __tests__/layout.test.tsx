@@ -2,12 +2,12 @@ import { render } from '@testing-library/react';
 import RootLayout from '../app/layout';
 
 const MockLayout = ({ children }: { children: React.ReactNode }) => {
-    return (
-      <RootLayout>
-        <div>{children}</div>
-      </RootLayout>
-    );
-  };
+  return (
+    <RootLayout>
+      <div>{children}</div>
+    </RootLayout>
+  );
+};
 
 test('renders header, main and footer', () => {
   const { getByText } = render(
@@ -18,5 +18,5 @@ test('renders header, main and footer', () => {
 
   expect(getByText('My App')).toBeInTheDocument();
   expect(getByText('Test Content')).toBeInTheDocument();
-  expect(getByText('All rights reserved.')).toBeInTheDocument();
+  expect(getByText((content, element) => content.startsWith('© 2024') && content.includes('All rights reserved.'))).toBeInTheDocument();
 });
