@@ -1,6 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Overview
 
-Project Overview
 This project includes a login and user management system using Next.js, Tailwind CSS for styling, and API routes for handling authentication and user data.
 
 Features
