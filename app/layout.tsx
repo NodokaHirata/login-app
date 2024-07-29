@@ -1,12 +1,15 @@
+import React from 'react';
 import "./globals.css";
+import Header from './components/layouts/header/Header';
+import Footer from './components/layouts/footer/Footer';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        <header>Header Component</header>
+        <Header />
         <main>{children}</main>
-        <footer>Footer Component</footer>
+        <Footer />
       </body>
     </html>
   );
