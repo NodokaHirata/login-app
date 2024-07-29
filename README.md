@@ -15,8 +15,8 @@ Please use "username" as Username and "password" as Password to login.
 First, clone the repository and navigate to the project directory:
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone https://github.com/NodokaHirata/login-app.git
+cd https://github.com/NodokaHirata/login-app.git
 ```
 
 Install the dependencies:
