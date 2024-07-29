@@ -1,23 +1,68 @@
 import React from 'react';
 
 interface InputProps {
-  type: string;
-  value: string;
+  id: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
+  value: string;
+  label: string;
+  type?: string;
 }
 
-const Input: React.FC<InputProps> = ({ type, value, onChange, placeholder }) => {
+const Input: React.FC<InputProps> = ({
+  id,
+  onChange,
+  value,
+  label,
+  type,
+}) => {
   return (
-    <input
-      type={type}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-        focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-black"
-    />
+    <div className="relative">
+      <input
+        id={id}
+        type={type}
+        value={value}
+        onChange={onChange}
+        className="
+          block
+          rounded-md
+          px-6
+          pt-7
+          pb-3
+          w-full
+          text-md
+          text-white
+          bg-neutral-700
+          appearance-none
+          focus:outline-none
+          focus:ring-0
+          peer
+        "
+        placeholder=""
+      />
+      <label
+        className="
+          absolute
+          text-md
+          text-zinc-400
+          duration-150
+          transform
+          -translate-y-3
+          scale-75
+          top-5
+          z-10
+          origin-[0]
+          left-5
+          peer-placeholder-shown:scale-100
+          peer-placeholder-shown:translate-y-0
+          peer-focus:scale-75
+          peer-focus:-translate-y-4
+        "
+        htmlFor={id}
+      >
+        {label}
+      </label>
+    </div>
   );
-};
+}
 
 export default Input;
